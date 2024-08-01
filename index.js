@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = 3000;
+
+// Use the PORT environment variable if available, otherwise default to 3000
+const PORT = process.env.PORT || 3000;
 
 // Middleware to parse JSON request bodies
 app.use(bodyParser.json());
