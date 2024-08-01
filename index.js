@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 // Webhook endpoint to receive inbound SMS
 app.post('/webhooks/inbound-sms', (req, res) => {
+    console.log(req.body)
     // Extract the message body from the request
     const { text } = req.body;
 
